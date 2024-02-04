@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.toysocialnetwork.controller.AdminController">
+   <children>
+      <BorderPane layoutY="-1.0" prefHeight="600.0" prefWidth="900.0">
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="126.0" layoutY="14.0" prefHeight="46.0" prefWidth="149.0" text="Registered Users" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="usersTableView" layoutX="-2.0" layoutY="63.0" prefHeight="380.0" prefWidth="400.0">
+                    <columns>
+                      <TableColumn fx:id="idUser" prefWidth="54.20001220703125" text="ID" />
+                      <TableColumn fx:id="firstNameUser" prefWidth="96.20001220703125" text="First Name" />
+                        <TableColumn fx:id="lastNameUser" prefWidth="82.20001220703125" text="Last Name" />
+                        <TableColumn fx:id="emailUser" prefWidth="74.5999755859375" text="Email" />
+                        <TableColumn fx:id="birthDateUser" prefWidth="94.79998779296875" text="Birth Date" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </left>
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" prefHeight="100.0" prefWidth="899.0" text="Administrator Mode">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <right>
+            <AnchorPane prefHeight="445.0" prefWidth="372.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="135.0" layoutY="31.0" prefHeight="18.0" prefWidth="79.0" text="Friends">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <TableView fx:id="friendsTableView" layoutX="1.0" layoutY="69.0" prefHeight="251.0" prefWidth="370.0">
+                    <columns>
+                      <TableColumn fx:id="idFriend" prefWidth="60.20001292228699" text="Friend ID" />
+                      <TableColumn fx:id="firstNameFriend" prefWidth="100.20001220703125" text="First Name" />
+                        <TableColumn fx:id="lastNameFriend" minWidth="1.0" prefWidth="102.199951171875" text="Last Name" />
+                        <TableColumn fx:id="friendsSince" prefWidth="105.5999755859375" text="Friends Since" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </right>
+         <bottom>
+            <AnchorPane prefHeight="151.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="23.0" layoutY="24.0" prefHeight="32.0" prefWidth="170.0" text="Community Count:" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="communityCount" editable="false" layoutX="185.0" layoutY="27.0" prefHeight="26.0" prefWidth="36.0" />
+               </children></AnchorPane>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="28.0" layoutY="94.0" mnemonicParsing="false" onAction="#handleAddUser" prefHeight="40.0" prefWidth="90.0" text="Add User" />
+                  <Button layoutX="28.0" layoutY="143.0" mnemonicParsing="false" onAction="#handleUpdateUser" prefHeight="40.0" prefWidth="90.0" text="Update User" />
+                  <Button layoutX="28.0" layoutY="194.0" mnemonicParsing="false" onAction="#handleRemoveUser" prefHeight="40.0" prefWidth="90.0" text="Delete User" />
+                  <Button layoutX="28.0" layoutY="271.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Add Friend" />
+                  <Button layoutX="28.0" layoutY="320.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" text="Delete Friend" />
+               </children>
+            </AnchorPane>
+         </center></BorderPane>
+   </children>
+</AnchorPane>

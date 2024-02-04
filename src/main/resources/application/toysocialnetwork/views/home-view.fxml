@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.toysocialnetwork.controller.HomeController">
+   <children>
+      <BorderPane layoutX="218.0" layoutY="150.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="21.0" layoutY="9.0" prefHeight="66.0" prefWidth="253.0" text="Welcome to ChatBot">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="98.0" layoutY="124.0" mnemonicParsing="false" onAction="#handleLogIn" prefHeight="30.0" prefWidth="100.0" text="Log In" />
+                  <Button layoutX="98.0" layoutY="169.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="30.0" prefWidth="100.0" text="Sign Up" />
+                  <Button layoutX="98.0" layoutY="214.0" mnemonicParsing="false" onAction="#handleAdminMode" prefHeight="30.0" prefWidth="100.0" text="Admin Mode" />
+               </children></AnchorPane>
+         </center>
+         <top>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/chatbot-app-icon.png" />
+                     </image></ImageView>
+                  <Label alignment="CENTER" prefHeight="100.0" prefWidth="570.0" text="ChatBot - Your new social network" underline="true">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

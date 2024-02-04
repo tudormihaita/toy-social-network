@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.toysocialnetwork.controller.ProfileController">
+   <children>
+      <BorderPane layoutX="285.0" layoutY="122.0" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <AnchorPane prefHeight="446.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="friendsButton" onAction="#handleFriendsTab" layoutX="1.0" layoutY="35.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/friends-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="communityButton" layoutX="1.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleCommunityTab" prefHeight="48.0" prefWidth="48.0">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/community-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="chatButton" layoutX="1.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleChatTab" prefHeight="48.0" prefWidth="48.0">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/chat-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="settingsButton" layoutX="1.0" layoutY="295.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="48.0">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/settings-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="logOutButton" layoutX="1.0" layoutY="365.0" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="48.0" prefWidth="48.0">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/logout-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <AnchorPane prefHeight="464.0" prefWidth="730.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="searchNameField" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="334.0" promptText="Search name" />
+                  <TableView fx:id="matchedUsersTableView" layoutX="14.0" layoutY="51.0" prefHeight="162.0" prefWidth="381.0">
+                     <columns>
+                        <TableColumn fx:id="firstNameMatchColumn" prefWidth="177.60003662109375" />
+                        <TableColumn fx:id="lastNameMatchColumn" prefWidth="308.0" />
+                     </columns>
+                  </TableView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="356.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/search-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="sendRequestButton" layoutX="14.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleSendRequest" prefHeight="48.0" prefWidth="48.0">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/send-request-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="cancelRequestButton" layoutX="333.0" layoutY="220.0" mnemonicParsing="false" onAction="#handleCancelRequest" prefHeight="48.0" prefWidth="48.0">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cancel-request-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane layoutX="421.0" layoutY="12.0" prefHeight="404.0" prefWidth="302.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-4.0" layoutY="5.0" prefHeight="79.0" prefWidth="300.0" text="Connect with people around you!">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="84.0" prefHeight="60.0" prefWidth="125.0" text="Users:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="162.0" prefHeight="60.0" prefWidth="125.0" text="Friendships:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="237.0" prefHeight="60.0" prefWidth="125.0" text="Communities:">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="usersCount" editable="false" layoutX="206.0" layoutY="102.0" prefHeight="25.0" prefWidth="50.0" />
+                        <TextField fx:id="friendshipsCount" editable="false" layoutX="206.0" layoutY="180.0" prefHeight="25.0" prefWidth="50.0" />
+                        <TextField fx:id="communitiesCount" editable="false" layoutX="206.0" layoutY="255.0" prefHeight="25.0" prefWidth="50.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane prefHeight="73.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="homeProfileButton" layoutX="730.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleHomeProfileTab" prefHeight="48.0" prefWidth="48.0">
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/home-menu-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fitHeight="70.0" fitWidth="90.0" layoutX="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/chatbot-icon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="userWelcomeLabel" layoutX="90.0" layoutY="4.0" prefHeight="65.0" prefWidth="570.0" />
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
